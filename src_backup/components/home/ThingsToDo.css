@@ -1,0 +1,54 @@
+.things-to-do {
+  display: flex;
+  gap: 24px; /* updated gap */
+}
+
+.thing {
+  position: relative;
+  flex: 1;
+  width: 628px;       /* fixed width */
+  height: 628px;      /* fixed height */
+  border-radius: 8px; /* updated border-radius */
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  padding: 80px;      /* updated padding */
+  background-size: cover;
+  background-position: center;
+  opacity: 1;         /* explicit opacity */
+  transition: transform 0.3s ease;
+  transform: rotate(0deg); /* no rotation */
+}
+
+.thing:hover {
+  transform: scale(1.05);
+}
+
+.thing .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.thing button {
+  margin-top: 10px;
+  background-color: #ff385c;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.thing.trip {
+  background-image: url('https://images.unsplash.com/photo-1505521272875-d5f5e1b54f1f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.thing.home {
+  background-image: url('https://images.unsplash.com/photo-1717070397051-7f56f6f888ec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDZ8fHxlbnwwfHx8fHw%3D');
+}
+
