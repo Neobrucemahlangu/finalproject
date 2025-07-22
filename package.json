@@ -4,12 +4,10 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "scripts": {
-    "start": "react-scripts start",
-    "server": "node backend/server.js",
-    "build": "react-scripts build",
-    "heroku-postbuild": "npm install && npm run build",
-    "dev": "concurrently \"npm run server\" \"npm start\""
-  },
+  "start": "node backend/server.js",
+  "build": "react-scripts build",
+  "heroku-postbuild": "npm run build"
+},
   "dependencies": {
     "axios": "^1.10.0",
     "bcryptjs": "^3.0.2",
