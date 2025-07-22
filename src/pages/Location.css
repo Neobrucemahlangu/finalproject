@@ -1,0 +1,29 @@
+.location-page {
+  padding: 20px 30px;
+}
+
+.listings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.listing-card {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.listing-card img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.listing-card .info {
+  flex: 1;
+}

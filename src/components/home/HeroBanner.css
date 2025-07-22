@@ -1,0 +1,42 @@
+.hero-banner {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/65e7807ce503d5011dff2a74/1709671742291-TH176LA2UPZS89H97HEI/image-asset.jpeg"); /* Replace with your own image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  
+}
+
+.explore-btn {
+  background-color: white;
+  color: #ff385c;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #f7f7f7;
+}

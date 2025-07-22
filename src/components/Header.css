@@ -1,0 +1,193 @@
+/* === Header Layout === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Arial", sans-serif;
+}
+
+/* === Logo === */
+.header-left {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 32px;
+  user-select: none;
+}
+
+/* === Search Bar === */
+.header-center {
+  flex: 1;
+  margin: 0 20px;
+  position: relative;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* space between inputs */
+  background-color: #f7f7f7;
+  padding: 10px 16px; /* internal space around the bar */
+  border-radius: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.75rem;
+  min-width: 100px;
+  flex: 1;
+  padding-inline: 6px;
+}
+
+.search-field label {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.search-field input,
+.date-picker-input {
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.location-field {
+  position: relative;
+  flex: 1.2;
+}
+
+/* === Location Dropdown === */
+.location-dropdown {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1500;
+}
+
+.location-dropdown .dropdown-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.location-dropdown .dropdown-item:hover {
+  background-color: #ff385c;
+  color: white;
+  border-radius: 8px;
+}
+
+/* === Search Button === */
+.search-button {
+  background-color: transparent;
+  border: none;
+  color: #555;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background-color: #eee;
+}
+
+/* === Header Right (Host/Profile) === */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.host-link {
+  cursor: pointer;
+  font-weight: 600;
+  color: #ff385c;
+  border: 1.5px solid #ff385c;
+  padding: 6px 14px;
+  border-radius: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.host-link:hover {
+  background-color: #ff385c;
+  color: white;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #222;
+  cursor: pointer;
+  user-select: none;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-icon {
+  font-size: 1.8rem;
+  color: #222;
+}
+
+/* === Profile Dropdown === */
+.dropdown-content {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content span {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #222;
+  user-select: none;
+}
+
+.dropdown-content span:hover {
+  background-color: #ff385c;
+  color: white;
+  border-radius: 8px;
+}
+
