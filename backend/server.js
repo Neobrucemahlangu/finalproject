@@ -11,7 +11,9 @@ import listingRoutes from "./routes/listingRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
-dotenv.config();
+// ✅ Load .env file from backend folder
+dotenv.config({ path: "./.env" });
+
 console.log("MONGO_URI from .env:", process.env.MONGO_URI);
 
 const app = express();
@@ -31,15 +33,6 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-// MongoDB connection
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => {
-    console.error("MongoDB connection error:", err.message);
-    process.exit(1);
-  });
-
 // Setup __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -54,6 +47,15 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "../build", "index.html"));
   });
 }
+
+// MongoDB connection
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => {
+    console.error("MongoDB connection error:", err.message);
+    process.exit(1);
+  });
 
 // Start the server
 const PORT = process.env.PORT || 5000;
